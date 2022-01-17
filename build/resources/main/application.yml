@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  profiles: default
+
+logging:
+  file: /PerfLogs/api-bankAccount.log
+  level:
+    root: info
