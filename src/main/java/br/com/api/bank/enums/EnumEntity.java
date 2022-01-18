@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public enum EnumEntity {
     DEPOSIT("deposit"),
-    WITHDRAWAL("withdrawal"),
+    WITHDRAWAL("withdraw"),
     TRANSFER("transfer"),
     CREATED("created");
 

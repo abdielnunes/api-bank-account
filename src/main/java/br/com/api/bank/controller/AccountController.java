@@ -25,11 +25,11 @@ public class AccountController {
     Account acc = new Account();
     List<Account> accounts = new ArrayList<>();
 
-    @PostMapping("/reset")
+    @PostMapping(value = "/reset", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity reset() {
         acc = new Account();
         accounts = new ArrayList<>();
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>("OK", HttpStatus.OK);
     }
 
     @GetMapping("/balance")
