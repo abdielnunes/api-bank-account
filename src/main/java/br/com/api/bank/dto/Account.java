@@ -4,9 +4,11 @@ import br.com.api.bank.enums.EnumEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.*;
+import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
 
+@Log4j2
 @AllArgsConstructor
 @Builder
 public class Account {
@@ -27,23 +29,23 @@ public class Account {
     @SneakyThrows
     public void show(final String account) {
         ObjectMapper ob = new ObjectMapper();
-        System.out.print(ob.writeValueAsString(new Account(account, type, balance, event)));
+        log.info("Json: {}", ob.writeValueAsString(new Account(account, type, balance, event)));
     }
 
     public void deposit(final double amount) {
         balance = (balance + amount);
-        System.out.print("Deposit made successfully: R$ "+ balance);
+        log.info("Deposit made successfully: R$ {}", balance);
     }
 
     public void withdrawal(final double amount) {
         final boolean negative = Math.copySign(1, amount) < 0;// Não permitir subtrair valor negativo
         if(!negative) {
-            System.out.println("Amount you want to withdraw is: R$ " + amount);
+            log.info("Amount you want to withdraw is: R$ {}", amount);
             if (balance >= amount) {
                 balance = (balance - amount);
-                System.out.println("Balance after withdrawal: R$ " + balance);
+                log.info("Balance after withdrawal: R$ {}", balance);
             } else {
-                System.out.println("Your balance is less than R$ " + amount);
+                log.info("Your balance is less than R$ {}", amount);
             }
         }
     }
