@@ -1,3 +1,7 @@
+/*
+ * Copyright 2022-2022 the original author or authors.
+ *
+ */
 package br.com.api.bank.dto;
 
 import br.com.api.bank.enums.EnumEntity;
@@ -8,6 +12,15 @@ import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
 
+/**
+ * Class that represents data and attributes of a bank account.
+ *
+ * @since JDK 1.8
+ * @since Spring Boot 2.6.2
+ * @since Lombok 1.18.22
+ * @author Abdiel Nunes
+ * @version v0.0.1  d13 Jan 2022
+ */
 @Log4j2
 @AllArgsConstructor
 @Builder
