@@ -87,7 +87,7 @@ Recebe os parâmetros e retorna {"origin": {"id":"100", "balance":0}, "destinati
 
 ## Apêndice
 
-A API foi construída para testes aplicados e foi utilizado https://ngrok.com/ para criação do servidor e executado os testes no https://ipkiss.pragmazero.com/
+A API foi construída para testes aplicados e foi utilizado https://ngrok.com/ para a exposição do servidor e executado os testes no https://ipkiss.pragmazero.com/
 
 ## Contributing
 Solicitações de pull são bem-vindas. Para grandes mudanças, abra um problema primeiro para discutir o que você gostaria de mudar.
