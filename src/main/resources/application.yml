@@ -2,7 +2,16 @@ server:
   port: 8080
 
 spring:
-  profiles: default
+  config:
+    activate:
+      on-profile: "default"
+  application:
+    name: WP Control
+    title: ${project.description}
+    version: ${project.version}
+    java: ${project.sourceCompatibility}
+  main:
+    banner-mode: "console"
 
 logging:
   file: /PerfLogs/api-bankAccount.log
